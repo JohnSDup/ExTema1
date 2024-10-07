@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 10px;
+    background-color: #ffffff; 
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #da8302;
+    border: 10px solid black;
+    gap: 10px;
+}
+
+.box1, .box3 {
+    flex: 0 0 25%; 
+    background-color: #5aa801; 
+    border: 5px solid black;
+}
+.box2 {
+    flex: 1; 
+    background-color: #5aa801;
+    border: 5px solid black;
+}
+
+.banner {
+    background-color: #af8807;
+    border: 10px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    gap: 0; 
+    border: 5px solid black;
+}
+
+.section {
+    background-color: #0aa3a8; 
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.articulos-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap; 
+    gap: 10px;
+    
+    
+}
+
+.articulo {
+    flex: 1 1 calc(50% - 10px);
+    background-color: #e0e0e0;
+    border: 5px solid black;
+    width: 100%;
+    padding: 20px;
+}
+
+.nav {
+    background-color: #6baa05; 
+    border: 3px solid black;
+    padding: 20px;
+    margin-top: 20px;
+    flex: 1;
+}
+
+.aside {
+    background-color: #bcdd00;
+    border: 10px solid black;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px; 
+    padding: 20px;
+}
+.publicidad-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.publicidad {
+    background-color: #9ff500;
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    text-align: start;
+}
+
+.pie {
+    background-color: #a2c508; 
+    border: 10px solid black;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) { 
+    .container, .main {
+        flex-direction: column;
+    }
+
+    .aside {
+        width: 100%;
+    }
+
+    .box1, .box2, .box3 {
+        flex: 1;
+        width: 100%;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+
+    .articulo {
+        flex: 1 1 100%;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) { 
+    .container, .main {
+        flex-direction: column;
+    }
+    .box1, .box2 , .box3 {
+        width: 100%;
+    }
+
+    .publicidad, .aside {
+        width: 100%;
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80%;
+    }
+
+    .articulos-container {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .articulo {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
